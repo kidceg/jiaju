@@ -47,9 +47,13 @@ sign.addEventListener('click',function(){
 signUpClose.addEventListener('click',function(){
      signUp.style.display = 'none';
      screen.style.display = 'none';
+     tips.innerHTML='　';
+     passtips.style.display='none';
      for(var i = 0; i<texts.length;i++){
       texts[i].value='';
+      texts[i].style.border=''; 
      }
+
 
 });
 
@@ -165,26 +169,46 @@ signButton.addEventListener('click',function(){
     tips.style.color='#48C157';
     signButton.style.color='white';
     signButton.style['background-color']='#48C157';
+
+
+    var num = 4;                
+    var min = 0;  
+    var countDown =setInterval(function () {  
+   num--;    
+   tips.innerHTML= '注册成功，将在3s内关闭本窗口:　'+num+"s";               
+  if (num == min) {           
+    clearInterval(countDown);          
+    signUp.style.display='none'; 
+    screen.style.display='none';
+    signButton.style['background-color']='';
+    signButton.style.color='';
+    tips.innerHTML='　' ;
+    tips.style.color='';
+    passtips.style.display='none';
+     for(var i = 0; i<texts.length;i++){
+      texts[i].value='';
+      texts[i].style.border=''; 
+     }
+
+  } 
+}, 1000);  
+
+
+
+
   }
 })
 
 
-var num = 4;                
-var min = 0;                
-signButton.addEventListener('mouseup',function(){
-setInterval(function () {  
-   num--;    
-   tips.innerHTML= '注册成功，将在3s内关闭本窗口:'+num+"s";               
-  if (num == min) {           
-    clearInterval(this);          
-    signUp.style.display='none'; 
-    screen.style.display='none';     
-  } 
-}, 1000);   
 
 
 
-})
+
+
+
+
+
+
 
 
 
