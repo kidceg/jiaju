@@ -65,17 +65,18 @@ var pPass1=/^(.{8,16})$/;
 
 
 
-//声明一些变量用来赋值最后判断注册条件是否成立
-// var checkUser,checkEmali,checkPassword;
+//声明checkNum用来赋值最后判断注册条件是否成立
 var checkNum = 0;
 
 //用户名的验证，输入框失去焦点后判断是否符合要求
 texts[0].addEventListener('blur',function(){
-    if(texts[0].value.length!==0 && pUser.test(texts[0].value)==false){
-    tips.innerHTML='错误提示：用户名4-15字符，可以是大小写字母、数字、下划线。';
-    texts[0].style.border ='1px solid red';
-    signButton.style.color='';
-    signButton.style['background-color']='';}else{
+    if (texts[0].value.length!==0 
+      && pUser.test(texts[0].value)==false){
+      tips.innerHTML='错误提示：用户名4-15字符，可以是大小写字母、数字、下划线。';
+      texts[0].style.border ='1px solid red';
+      signButton.style.color='';
+      signButton.style['background-color']='';
+    }else{
       tips.innerHTML='　';
       texts[0].style.border ='';
     }

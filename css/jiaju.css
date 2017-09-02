@@ -126,7 +126,6 @@ a{
 	width: 120px;
 	height: 48px;
 	text-align: center;
-	position: relative;
 	color: white;
 	background-color: black;
     font-size: 18px;
@@ -505,19 +504,27 @@ a{
 }
 
 
-
+#sign-up-container{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
 
 #signUp{
-	visibility: hidden;
+	/* visibility: hidden; */
 	display: block; 
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 	width: 400px;
 	height: 316px;
 	border: 1px solid #2D2D2D;
 	text-align: center;
 	font-size: 15px;
-	position: fixed;
+	position: absolute;
 	z-index: 9999;
 	background-color: white;
 }
@@ -550,7 +557,7 @@ a{
 }
 
 #screen{
-	display: none;
+	display: block;
 	position: absolute;
 	top: 0;
 	left: 0;

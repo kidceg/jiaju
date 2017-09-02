@@ -11,26 +11,45 @@
 
 </head>
 <body>
-<div id="signUp">
+<!-- 注册模块 -->
+<div id='sign-up-container'>
+  <div id='signUp'>
     <div id='signUpClose'>×</div>
     <h2>注册</h2>
     <div id='signUp-content'>
-        <div id='user'>　用户名：<input type='text' name='user' value='' class='text' /></div>
-        <div id='email'>　　邮箱：<input type='text' name='email' value='' class='text'/></div>
-        <div id='password'>　　密码：<input type="password" name="password" value='' class='text'/> <span id='passtips'>弱</span></div>
-        <div id='password2'>确认密码：<input type="password" name="password2" value='' class='text'/></div>
+        <div>　用户名：
+            <input id='user' class='text' type='text' name='user' value='' />
+        </div>
+        <div>　　邮箱：
+            <input id='email' class='text' type='text' name='email' value='''/>
+        </div>
+        <div>　　密码：
+            <input id='password' class='text' type="password" name="password" value=''/> 
+        <!-- 提示密码强度 -->
+            <span id='passtips'>弱</span>
+        </div>
+        <div>确认密码：
+            <input id='password2' class='text' type="password" name="password2" value='' />
+        </div>
     </div>
+    <!-- 提示输入错误 -->
     <p id='tips'>　</p>
-
-    <div><input type="button" name="button" id='signButton' value='注册'/></div>
+    <!-- 注册按钮 -->
+    <div>
+        <input id='signButton' type="button" name="button" value='注册'/>
+    </div>
  
+  </div>
+  <!-- 注册框弹出时背景变化 -->
+  <div id="screen"></div>
 </div>
-<div id="screen"></div>
+
 <!-- 头部登录、注册-->
 <div id='Top'>
         <span>登录</span>
         <span id='sign'>注册</span>
 </div>
+
 <!-- 头部logo 和搜索框-->
 <div class="header-top">
     <div class="width-center">
@@ -76,20 +95,20 @@
 </div>
 <!-- 主要内容：图片和公司介绍 -->
 <div class="index-content1">
- <!-- 主要内容——图片 -->
-<div class="index-content1-pic">
-    <img src="images/sectionbanner.png" alt="">
+     <!-- 主要内容——图片 -->
+    <div class="index-content1-pic">
+        <img src="images/sectionbanner.png" alt="">
+    </div>
+     <!-- 主要内容——公司介绍 -->
+    <div class="index-auto">
+        <h1>公司介绍</h1>
+        <h3>COMPANY INTRODUCTION</h3>
+        <p>FURNITUREDESGIN是一家拥有丰富的经验的家具设计公司。所设计的家具销往全国各地。设计的实践，在于为生活提供更舒适的环境及精确负责的施工，我们具有非常专业的团队，为客户创造符合装修风格的贴心家具。满足客户的要求与喜好，甚至将梦想中的生活氛围透过专业的感知力呈现，将家具透过色彩以及最和谐的比例设计而成。公司凭借高素质的人才队伍，先进的工艺和完善的企业管理，赢得了国内外客户的良好赞誉。</p>
+        <a class="index-button" href=" ">查看详情</a>
+    </div>
 </div>
- <!-- 主要内容——公司介绍 -->
- <div class="index-auto">
-    <h1>公司介绍</h1>
-    <h3>COMPANY INTRODUCTION</h3>
-    <p>FURNITUREDESGIN是一家拥有丰富的经验的家具设计公司。所设计的家具销往全国各地。设计的实践，在于为生活提供更舒适的环境及精确负责的施工，我们具有非常专业的团队，为客户创造符合装修风格的贴心家具。满足客户的要求与喜好，甚至将梦想中的生活氛围透过专业的感知力呈现，将家具透过色彩以及最和谐的比例设计而成。公司凭借高素质的人才队伍，先进的工艺和完善的企业管理，赢得了国内外客户的良好赞誉。</p>
-    <a class="index-button" href=" ">查看详情</a>
- </div>
 
-</div>
-<!-- 四个系列，圆形 -->
+<!-- 四个圆形系列 -->
 <div class="index-product">
     <ul class="index-active">
         <li class="active1"><a href=" "></a></li>
@@ -98,114 +117,124 @@
         <li class="active4"><a href=" "></a></li>
     </ul>
 </div>
-<!-- 精选案例1 -->
-<div class="index-morecase">
-<span></span>
-<a href=" ">MORE &#62; &#62;</a>
-</div>
-<!-- 六张椅子图片 -->
-<div class="index-content2">
-<div class="product-list">
-    <div class="product-pic">
-        <a href=" ">
-            <img src="images/product1.png" />
-        </a>
+
+<!-- 产品展示区域 -->
+<div class='products'>
+    <!-- 精选案例1 、more-->
+    <div class="index-morecase">
+    <span></span>
+    <a href=" ">MORE &#62; &#62;</a>
     </div>
-    <div class="product-pic">
-        <a href=" ">
-            <img src="images/product2.png" />
-        </a>
+
+    <!-- 六张椅子图片 -->
+    <div class="index-content2">
+    <div class="product-list">
+        <div class="product-pic">
+            <a href=" ">
+                <img src="images/product1.png" />
+            </a>
+        </div>
+        <div class="product-pic">
+            <a href=" ">
+                <img src="images/product2.png" />
+            </a>
+        </div>
+        <div class="product-pic">
+            <a href=" ">
+                <img src="images/product3.png" />
+            </a>
+        </div>
+        <div class="product-pic">
+            <a href=" ">
+                <img src="images/product1.png" />
+            </a>
+        </div>
+        <div class="product-pic">
+            <a href=" ">
+                <img src="images/product2.png" />
+            </a>
+        </div>
+        <div class="product-pic">
+            <a href=" ">
+                <img src="images/product3.png" />
+            </a>
+        </div>
     </div>
-    <div class="product-pic">
-        <a href=" ">
-            <img src="images/product3.png" />
-        </a>
     </div>
-    <div class="product-pic">
-        <a href=" ">
-            <img src="images/product1.png" />
-        </a>
-    </div>
-    <div class="product-pic">
-        <a href=" ">
-            <img src="images/product2.png" />
-        </a>
-    </div>
-    <div class="product-pic">
-        <a href=" ">
-            <img src="images/product3.png" />
-        </a>
-    </div>
-</div>
 </div>
 
-<!-- 精选案例2 -->
-<div class="index-morecase">
-<span></span>
-<a href=" ">MORE &#62; &#62;</a>
+<!-- 文章展示区域 -->
+<div class='articles'>
+    <!-- 精选案例2 -->
+    <div class="index-morecase">
+    <span></span>
+    <a href=" ">MORE &#62; &#62;</a>
+    </div>
+    <!-- 图片和五篇文章 -->
+    <div class="index-content3">
+    <div class="article-index">
+        <ul class="article-ul-1">
+            <li><img  src="images/productlogo.png" alt=""> </li>
+            <li>  <a href=" "><h3>怎么搭配茶几与沙发?</h3>
+                <p>在现代居住空间里面，有沙发的地方似乎总也少不了
+                    茶几的身影。尤其在现代客厅里，一款实用、时尚的</p></a></li>
+        </ul>
+        <ul class="article-ul-2">
+            <li><a href=" "><h3>家具有哪些类型?</h3>
+                <p>按家具从风格上可以分为：现代家具、欧式古典家具、
+                    美式家具、中式古典家具（也就是红木家具），还有……
+                </p>
+            </a></li>
+            <li><a href=" "><h3>实木家具需保养防开裂</h3>
+                <p>实木家具越来越受人们的欢迎，有很多业主在装修时
+                    都选择实木家具。但是他们购买之后不对它进行保养……
+                </p></a>
+            </li>
+            <li><a href=" "><h3>卧室如何选择合适的衣橱家具色彩</h3>
+                <p>要选择合适的家具色彩，首先要符合个人爱好，又要
+                    注意与房间的大小、室内光线的明暗相结合，并且要……
+                </p></a>
+            </li>
+            <li><a href=" "><h3>韩派办公家具制作工艺过程</h3>
+                <p>苏州韩派办公家具制作工艺过程，品牌办公家具厂家
+                    都具有一整套生产流程，通过对工艺流程的规范以及……
+                </p></a>
+            </li>
+        </ul>
+    </div>
+    </div>
 </div>
-<!-- 图片和五篇文章 -->
-<div class="index-content3">
-<div class="article-index">
-    <ul class="article-ul-1">
-        <li><img  src="images/productlogo.png" alt=""> </li>
-        <li>  <a href=" "><h3>怎么搭配茶几与沙发?</h3>
-            <p>在现代居住空间里面，有沙发的地方似乎总也少不了
-                茶几的身影。尤其在现代客厅里，一款实用、时尚的</p></a></li>
-    </ul>
-    <ul class="article-ul-2">
-        <li><a href=" "><h3>家具有哪些类型?</h3>
-            <p>按家具从风格上可以分为：现代家具、欧式古典家具、
-                美式家具、中式古典家具（也就是红木家具），还有……
-            </p>
-        </a></li>
-        <li><a href=" "><h3>实木家具需保养防开裂</h3>
-            <p>实木家具越来越受人们的欢迎，有很多业主在装修时
-                都选择实木家具。但是他们购买之后不对它进行保养……
-            </p></a>
-        </li>
-        <li><a href=" "><h3>卧室如何选择合适的衣橱家具色彩</h3>
-            <p>要选择合适的家具色彩，首先要符合个人爱好，又要
-                注意与房间的大小、室内光线的明暗相结合，并且要……
-            </p></a>
-        </li>
-        <li><a href=" "><h3>韩派办公家具制作工艺过程</h3>
-            <p>苏州韩派办公家具制作工艺过程，品牌办公家具厂家
-                都具有一整套生产流程，通过对工艺流程的规范以及……
-            </p></a>
-        </li>
-    </ul>
-</div>
-</div>
-
+<!-- 公司联系方式和微信二维码 -->
 <div class="footer-info">
-<div class="footer-content">
-<div class="footer-content-middle">
- <!-- 微信扫描 -->
-   <img src="images/qccode.png" alt="">
-  <div>
-    <h3>招商热线:0000-0000000</h3>
-   <div class="footer-box">
-      <div class="footer-box1">
-            <span class="icon-tel"></span>
-            <p>公司电话:<br/>
-            0000-0000000</p>
-        </div>
-        <div class="footer-box2">
-            <span class="icon-email"></span>
-            <p>公司邮箱:<br>
-            000@000000.com</p>
-        </div>
-        <div class="footer-box3">
-            <span class="icon-address"></span>
-            <p>公司地址:<br/>
-            XXX省XXX市XXX大道小区XXX栋XXX</p>
-        </div>
+    <div class="footer-content">
+     <div class="footer-content-middle">
+     <!-- 微信扫描 -->
+       <img src="images/qccode.png" alt="">
+     <!-- 公司联系电话邮箱地址 -->
+      <div>
+        <h3>招商热线:0000-0000000</h3>
+       <div class="footer-box">
+          <div class="footer-box1">
+                <span class="icon-tel"></span>
+                <p>公司电话:<br/>
+                0000-0000000</p>
+            </div>
+            <div class="footer-box2">
+                <span class="icon-email"></span>
+                <p>公司邮箱:<br>
+                000@000000.com</p>
+            </div>
+            <div class="footer-box3">
+                <span class="icon-address"></span>
+                <p>公司地址:<br/>
+                XXX省XXX市XXX大道小区XXX栋XXX</p>
+            </div>
+         </div>
+       </div>
      </div>
-   </div>
+    </div>
 </div>
-</div>
-</div>
+
 </body>
-    <script src="js/jiaju.js"></script>
+<!--     <script src="js/jiaju.js"></script> -->
 </html>
