@@ -531,10 +531,17 @@ a{
 
 #signUpClose{
 	float: right;
-	margin: 2px;
+	width: 45px;
+	height: 50px;
+	margin: 8px 0 0 0;
 	font-size: 30px;
 	line-height: 20px;
 	cursor: pointer;
+}
+
+#signUpClose:hover{
+	font-size: 40px;
+	color: #D61F2D;
 }
 
 #signUp h2{
@@ -582,9 +589,12 @@ a{
 	height: 35px;
 	font-size: 16px;
 	color: black;
-	background-color: #F2F2F2;
+	background-color: #E9E9E9;
 	border:1px solid #989898;
 	cursor: pointer;
+}
+#signButton:hover{
+	background-color: #F2F2F2;
 }
 
 .passwordP{
