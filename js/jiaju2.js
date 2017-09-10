@@ -1,7 +1,7 @@
  $(document).ready(function(e) {
 
 //注册模块（包括注册框和背景）div
-var $sign_upc_ontainer = $('#sign-up-container');
+var $sign_upc_ontainer = $('#sign_upc_ontainer');
 //注册框 div
 var $signUp = $('#signUp');
 

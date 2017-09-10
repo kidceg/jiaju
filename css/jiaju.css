@@ -504,7 +504,7 @@ a{
 }
 
 
-#sign-up-container{
+#sign_up_container{
 	display: none;
 	position: fixed;
 	top: 0;
@@ -521,7 +521,8 @@ a{
     transform: translate(-50%,-50%);
 	width: 400px;
 	height: 316px;
-	border: 1px solid #2D2D2D;
+	border: 1px solid #686866;
+	border-radius: 3px;
 	text-align: center;
 	font-size: 15px;
 	position: absolute;
@@ -561,6 +562,8 @@ a{
 	width: 180px;
 	height: 18px;
 	border: 1px solid #BABABA;
+	border-radius: 3px;
+	padding-left: 10px;
 }
 
 #screen{
@@ -591,6 +594,7 @@ a{
 	color: black;
 	background-color: #E9E9E9;
 	border:1px solid #989898;
+	border-radius: 3px;
 	cursor: pointer;
 }
 #signButton:hover{
