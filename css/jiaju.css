@@ -1,7 +1,12 @@
 body {
 	margin: 0;
 	padding:0;
-	width: 1349px;
+	width: 100%;
+}
+
+div,span{
+	margin: 0;
+	padding: 0;
 }
 
 ul {
@@ -60,7 +65,7 @@ a{
 
 .width-center{
 	display: inline-block;
-	width: 1100px;
+	width: 100%;
 	height: 80px;
 }
 
@@ -68,6 +73,7 @@ a{
 	display: inline-block;
 	float: left;
 	padding: 10px 0;
+	width: 20%;
 }
 
 .header-title{
@@ -504,14 +510,7 @@ a{
 }
 
 
-#sign_up_container{
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-}
+
 
 #signUp{
 	/* visibility: hidden; */
@@ -521,13 +520,42 @@ a{
     transform: translate(-50%,-50%);
 	width: 400px;
 	height: 316px;
-	border: 1px solid #686866;
+	border: 1px solid #767B84;
+	box-shadow: 3px 2px 2px #595959;
 	border-radius: 3px;
 	text-align: center;
 	font-size: 15px;
 	position: absolute;
 	z-index: 9999;
 	background-color: white;
+}
+
+.sign-header{
+	margin-bottom: 35px;
+	background-color: #EDF1F5;
+	width: 400px;
+	height: 45px;
+	border-bottom:1px solid #CFD3D9;
+}
+
+
+.sign-header p{
+	color:#5E5D5C;
+	padding-top: 3px;
+	font-size: 25px;
+	line-height: 40px;
+	margin-bottom: 30px;
+}
+
+
+#sign_up_container{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	color: #5E5D5C;
 }
 
 #signUpClose{
@@ -543,12 +571,14 @@ a{
 #signUpClose:hover{
 	font-size: 40px;
 	color: #D61F2D;
+	text-shadow: 1px 1px 1px #767B84;
 }
 
-#signUp h2{
-	font-weight: normal;
-	margin-bottom: 30px;
-}
+
+
+
+
+
 
 #signUp-content{
 	width: 85%;
@@ -561,6 +591,7 @@ a{
 #signUp-content input.text{
 	width: 180px;
 	height: 18px;
+	line-height: 18px;
 	border: 1px solid #BABABA;
 	border-radius: 3px;
 	padding-left: 10px;
@@ -579,7 +610,6 @@ a{
 	
 }
 
-
 #tips{
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -595,8 +625,10 @@ a{
 	background-color: #E9E9E9;
 	border:1px solid #989898;
 	border-radius: 3px;
+	box-shadow: 0 1px 0.5px #767B84;
 	cursor: pointer;
 }
+
 #signButton:hover{
 	background-color: #F2F2F2;
 }

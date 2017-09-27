@@ -27,7 +27,7 @@ var passtips = document.getElementById('passtips');
 //注册按钮 input
 var signButton = document.getElementById('signButton');
 
-
+var texts_len = texts.length;
 
 //因为如果signUp的display一开始是none的话js里获取不到它的高度，所以先用visibility设置为hidden隐藏它，但浏览器可以获取到高度，获取后再把display改成none。
 //让注册框在屏幕居中
@@ -49,13 +49,21 @@ signUpClose.addEventListener('click', function () {
      sign_up_container.style.display = 'none';
      tips.innerHTML = '　';
      passtips.style.display = 'none';
-     for (var i = 0; i < texts.length; i++) {
+     for (var i = 0; i < texts_len; i++) {
       texts[i].value = '';
       texts[i].style.border = ''; 
+      texts[i].style["box-shadow"] = "";
      }
 
 
 });
+
+for (var i = 0; i < texts_len; i++) {
+  texts[i].addEventListener('focus',function () {
+    this.style["border"] = '1px solid #567BB6';
+    this.style["box-shadow"] = '1px 1px 1px #94BFEA';
+  });
+}
 
 
 //各种验证正则匹配
@@ -75,6 +83,7 @@ var checkPassword2 = 0;
 // //声明checkNum用来赋值最后判断注册条件是否成立
 // var checkNum = 0;
 
+
 //用户名的验证，输入框失去焦点后判断是否符合要求
 user.addEventListener('blur', function () {
     if (user.value.length !== 0 
@@ -87,6 +96,7 @@ user.addEventListener('blur', function () {
     } else {
       tips.innerHTML = '　';
       user.style.border = '';
+      this.style["box-shadow"] = "";
       checkUser = 0;
     }
      if (pUser.test(user.value) == true) {
@@ -107,6 +117,7 @@ email.addEventListener('blur',function(){
     } else {
       tips.innerHTML = '　';
       email.style.border = '';
+      this.style["box-shadow"] = "";
       checkEmail = 0;
     }
     if (pEmail.test(email.value) == true) {
@@ -143,6 +154,7 @@ password.addEventListener('blur', function () {
       passtips.style.width = '66px';
       tips.innerHTML = '　';
       password.style.border = '';
+      this.style["box-shadow"] = "";      
       checkNum +=1;
       checkPassword = 1;
     } else if ((checkSum == 2 
@@ -157,6 +169,7 @@ password.addEventListener('blur', function () {
       passtips.style.width = '44px';
       tips.innerHTML = '　';
       password.style.border = '';
+      this.style["box-shadow"] = "";      
       checkPassword = 1;
     } else if (checkSum == 1 
       && password.value.length > 7
@@ -167,10 +180,12 @@ password.addEventListener('blur', function () {
       passtips.style.width = '22px';
       tips.innerHTML = '　';
       password.style.border = '';
+      this.style["box-shadow"] = "";      
       checkPassword = 1;
     } else if (password.value.length == 0) {
       tips.innerHTML = '　';
       password.style.border = '';
+      this.style["box-shadow"] = "";      
       passtips.style.display = 'none';
       checkPassword = 0;
     } else {
@@ -179,6 +194,7 @@ password.addEventListener('blur', function () {
       password.style.border = '1px solid red';
       signButton.style.color = '';
       signButton.style['background-color'] = '';
+      this.style["box-shadow"] = "";      
       checkPassword = 0;
 
     }
@@ -197,6 +213,7 @@ password2.addEventListener('blur', function () {
   } else {
     tips.innerHTML = '　';
     password2.style.border = '';
+    this.style["box-shadow"] = "";    
     checkPassword2 = 1;
   }
 })
@@ -209,9 +226,9 @@ signButton.addEventListener('click', function () {
       && checkPassword == 1
       && checkPassword2 == 1) {
     tips.innerHTML = '注册成功，将在3s内关闭本窗口。'
-    tips.style.color = '#48C157';
+    tips.style.color = '#5C873D';
     signButton.style.color = 'white';
-    signButton.style['background-color'] = '#48C157';
+    signButton.style['background-color'] = '#7FBB54';
 
     var num = 4;                
     var min = 0;  
@@ -228,9 +245,10 @@ signButton.addEventListener('click', function () {
         tips.innerHTML = '　' ;
         tips.style.color = '';
         passtips.style.display = 'none';
-         for (var i = 0; i < texts.length; i++){
+         for (var i = 0; i < texts_len; i++){
           texts[i].value = '';
           texts[i].style.border = ''; 
+          checkUser = 0;//如果重新给这个赋值，重新打开注册框点击注册会有bug
          }
 
       } 
